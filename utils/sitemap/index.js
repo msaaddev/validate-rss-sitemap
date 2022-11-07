@@ -4,15 +4,16 @@ const handleError = require('node-cli-handle-error');
 const ora = require('ora');
 const cliTable = require('cli-table');
 const chalk = require('chalk');
+const ask = require('../ask');
 
 const getLinks = async () => {
-	const sitemapStagingLink = new Input({
+	const sitemapStagingLink = await ask({
 		name: 'Staging Sitemap link',
 		message: 'Site map link to validate?',
 		hint: 'e.g. Staging Sitemap link'
 	});
 
-	const sitemapProdLink = new Input({
+	const sitemapProdLink = await ask({
 		name: 'Staging Sitemap link',
 		message: 'Sitemap link to validate with?',
 		hint: 'e.g. Production sitemap link'
@@ -77,6 +78,7 @@ module.exports = async () => {
 		console.log('');
 		console.log(table.toString());
 	} catch (err) {
+		spinner.fail('Something went wrong');
 		handleError(err);
 	}
 };

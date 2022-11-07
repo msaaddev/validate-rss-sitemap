@@ -1,17 +1,15 @@
-const { AutoComplete } = require('enquirer');
-const handleError = require('node-cli-handle-error');
+const { Input } = require('enquirer');
 
-module.exports = async () => {
-	const prompt = new AutoComplete({
-		name: 'command',
-		message: 'What do you want to do?',
-		choices: ['rss', 'sitemap']
+module.exports = async ({ name, message, hint }) => {
+	return new Input({
+		name,
+		message,
+		hint,
+		validate(value) {
+			if (value === '') return 'Please enter a valid link';
+			if (!value.includes('http')) return 'Please enter a valid link';
+
+			return true;
+		}
 	});
-
-	try {
-		return await prompt.run();
-	} catch (error) {
-		handleError(error);
-	}
-	return response;
 };

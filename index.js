@@ -12,7 +12,7 @@ const cli = require('./utils/cli');
 const log = require('./utils/log');
 const rss = require('./utils/rss');
 const sitemap = require('./utils/sitemap');
-const ask = require('./utils/ask');
+const question = require('./utils/question');
 
 const input = cli.input;
 const flags = cli.flags;
@@ -25,7 +25,7 @@ const { clear, debug } = flags;
 	input.includes(`sitemap`) && (await sitemap(flags));
 
 	if (!input.includes(`rss`) && !input.includes(`sitemap`) && !debug) {
-		const response = await ask();
+		const response = await question();
 		response === `rss` && (await rss(flags));
 		response === `sitemap` && (await sitemap(flags));
 	}

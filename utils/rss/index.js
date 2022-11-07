@@ -1,19 +1,19 @@
 const axios = require('axios');
 const htmlparser2 = require('htmlparser2');
 const handleError = require('node-cli-handle-error');
-const { Input } = require('enquirer');
 const ora = require('ora');
 const cliTable = require('cli-table');
 const chalk = require('chalk');
+const ask = require('../ask');
 
 const getLinks = async () => {
-	const feedStagingLink = new Input({
+	const feedStagingLink = await ask({
 		name: 'Staging RSS Feed link',
 		message: 'RSS feed link to validate?',
 		hint: 'e.g. Staging RSS feed link'
 	});
 
-	const feedProdLink = new Input({
+	const feedProdLink = await ask({
 		name: 'Production RSS Feed link',
 		message: 'RSS feed link to validate with?',
 		hint: 'e.g.Production RSS feed link'
@@ -87,6 +87,7 @@ module.exports = async () => {
 		console.log('');
 		console.log(table.toString());
 	} catch (err) {
+		spinner.fail('Something went wrong');
 		console.log(err);
 	}
 };
