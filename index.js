@@ -9,6 +9,7 @@
 
 const init = require('./utils/init');
 const cli = require('./utils/cli');
+const exit = require('./utils/exit');
 const log = require('./utils/log');
 const rss = require('./utils/rss');
 const sitemap = require('./utils/sitemap');
@@ -31,4 +32,6 @@ const { clear, debug } = flags;
 	}
 
 	debug && log(flags);
+
+	!debug && (await exit());
 })();
