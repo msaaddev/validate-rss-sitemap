@@ -5,7 +5,7 @@
 	"version": "0.0.1",
 	"license": "MIT",
 	"bin": {
-		"validate-app": "index.js",
+		"validate-rss-feed": "index.js",
 		"validate": "index.js"
 	},
 	"author": {
