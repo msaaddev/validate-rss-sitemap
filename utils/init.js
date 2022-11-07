@@ -5,11 +5,11 @@ const unhandled = require('cli-handle-unhandled');
 module.exports = ({ clear = true }) => {
 	unhandled();
 	welcome({
-		title: `validate-app`,
-		tagLine: `by saad`,
+		title: `validate-rss-sitemap`,
+		tagLine: `by Saad Irfan`,
 		description: pkg.description,
 		version: pkg.version,
-		bgColor: '#36BB09',
+		bgColor: '#00FFFF',
 		color: '#000000',
 		bold: true,
 		clear
