@@ -2,7 +2,7 @@
 	"name": "validate-rss-sitemap",
 	"description": "Validate RSS feed and Sitemap of staging and production apps",
 	"repository": "https://github.com/msaaddev/validate-rss-sitemap",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"license": "MIT",
 	"bin": {
 		"validate-rss-feed": "index.js",
