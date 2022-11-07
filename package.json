@@ -34,6 +34,7 @@
 		"enquirer": "^2.3.6",
 		"htmlparser2": "^8.0.1",
 		"meow": "^9.0.0",
+		"node-cli-handle-error": "^1.0.0",
 		"sitemapper": "^3.2.6"
 	},
 	"devDependencies": {
