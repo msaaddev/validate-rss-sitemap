@@ -1,8 +1,9 @@
 {
 	"name": "validate-rss-sitemap",
 	"description": "Validate RSS feed and Sitemap of staging and production apps",
+	"repository": "https://github.com/msaaddev/validate-rss-sitemap",
 	"version": "0.0.1",
-	"license": "UNLICENSED",
+	"license": "MIT",
 	"bin": {
 		"validate-app": "index.js",
 		"validate": "index.js"
@@ -14,7 +15,12 @@
 	},
 	"keywords": [
 		"validate-rss-sitemap",
-		"saad"
+		"saad",
+		"validate-sitemap",
+		"validate-rss-feed",
+		"sitemap",
+		"rss feed",
+		"saad irfan"
 	],
 	"files": [
 		"index.js",
