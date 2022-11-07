@@ -1,6 +1,6 @@
 {
 	"name": "validate-rss-sitemap",
-	"description": "Validate RSS feed and Sitemap of staging and production apps",
+	"description": "Validate RSS feed and Sitemap of one app against other app",
 	"repository": "https://github.com/msaaddev/validate-rss-sitemap",
 	"version": "0.0.2",
 	"license": "MIT",
