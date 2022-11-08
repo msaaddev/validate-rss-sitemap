@@ -6,8 +6,9 @@ module.exports = async ({ name, message, hint }) => {
 		message,
 		hint,
 		validate(value) {
-			if (value === '') return 'Please enter a valid link';
-			if (!value.includes('http')) return 'Please enter a valid link';
+			const regex =
+				/[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i;
+			if (!regex.test(value)) return 'Please enter a valid link';
 
 			return true;
 		}
