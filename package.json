@@ -2,7 +2,7 @@
 	"name": "validate-rss-sitemap",
 	"description": "Validate RSS feed and Sitemap of one app against other app",
 	"repository": "https://github.com/msaaddev/validate-rss-sitemap",
-	"version": "0.0.2",
+	"version": "0.1.0",
 	"license": "MIT",
 	"bin": {
 		"validate-rss-feed": "index.js",
